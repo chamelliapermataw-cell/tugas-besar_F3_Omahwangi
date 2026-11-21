@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omah Wangi - Deterjen & Pewangi Pakaian Berkualitas | Halal Indonesia</title>
+  <meta name="description" content="UMKM Omah Wangi menghadirkan rangkaian produk deterjen cair dan deterjen kapsul berkualitas tinggi, wangi tahan lama, dan bersertifikat Halal Indonesia.">
+
+  <!-- Favicons (Menggunakan logo dari folder assets/img/ dengan fallback SVG Omah Wangi) -->
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+  <link rel="apple-touch-icon" href="assets/img/logo.png">
+  <link rel="alternate icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 10L88 38V85H12V38L50 10Z' stroke='%23E83E8C' stroke-width='8' stroke-linejoin='round' fill='%23FCE7F3'/%3E%3Cpath d='M26 54C26 42 38 35 48 42C38 48 33 56 26 54Z' fill='%2348BB78'/%3E%3Cpath d='M74 54C74 42 62 35 52 42C62 48 67 56 74 54Z' fill='%2348BB78'/%3E%3Ccircle cx='50' cy='58' r='19' fill='%232B8CBE'/%3E%3Ccircle cx='44' cy='52' r='5' fill='%23FFFFFF' fill-opacity='0.8'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Poppins & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --ow-pastel-blue: #E6F2FA;
+      --ow-soft-blue: #D0E8F7;
+      --ow-bright-blue: #2B8CBE;
+      --ow-deep-blue: #1D6FA5;
+      --ow-navy: #1A365D;
+      --ow-pink: #E83E8C;
+      --ow-soft-pink: #FCE7F3;
+      --ow-green-leaf: #48BB78;
+      --ow-wa: #25D366;
+      --ow-white: #FFFFFF;
+      --ow-text: #2D3748;
+      --ow-muted: #64748B;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--ow-text);
+      background-color: #F8FBFE;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, h4, h5, h6, .navbar-brand {
+      font-family: 'Poppins', sans-serif;
+      color: var(--ow-navy);
+    }
+
+    /* Topbar */
+    .topbar {
+      background: linear-gradient(90deg, var(--ow-navy) 0%, var(--ow-deep-blue) 100%);
+      color: #fff;
+      font-size: 0.84rem;
+      padding: 8px 0;
+    }
+
+    .topbar a {
+      color: #E6F2FA;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .topbar a:hover {
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    /* Navbar */
+    .navbar-custom {
+      background-color: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 20px rgba(26, 54, 93, 0.06);
+      padding: 12px 0;
+    }
+
+    .nav-link {
+      color: var(--ow-navy) !important;
+      font-weight: 600;
+      font-size: 0.92rem;
+      padding: 8px 13px !important;
+      border-radius: 10px;
+      transition: all 0.25s ease;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--ow-bright-blue) !important;
+      background-color: var(--ow-pastel-blue);
+    }
+
+    /* Buttons */
+    .btn-wa {
+      background: linear-gradient(135deg, #22C55E 0%, #16A34A 100%);
+      color: #fff !important;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      padding: 9px 20px;
+      box-shadow: 0 4px 14px rgba(34, 197, 94, 0.28);
+      transition: all 0.25s ease;
+    }
+
+    .btn-wa:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(34, 197, 94, 0.38);
+      color: #fff !important;
+    }
+
+    .btn-shopee {
+      background: linear-gradient(135deg, #EE4D2D 0%, #FF7337 100%);
+      color: #fff !important;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      padding: 9px 20px;
+      box-shadow: 0 4px 12px rgba(238, 77, 45, 0.25);
+      transition: all 0.2s ease;
+    }
+
+    .btn-shopee:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(238, 77, 45, 0.35);
+      color: #fff !important;
+    }
+
+    .btn-ow-primary {
+      background: linear-gradient(135deg, var(--ow-bright-blue) 0%, var(--ow-deep-blue) 100%);
+      color: #fff !important;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      padding: 11px 26px;
+      box-shadow: 0 6px 18px rgba(43, 140, 190, 0.28);
+      transition: all 0.25s ease;
+    }
+
+    .btn-ow-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(43, 140, 190, 0.4);
+      color: #fff !important;
+    }
+
+    .btn-ow-outline {
+      background-color: #fff;
+      color: var(--ow-navy);
+      font-weight: 600;
+      border: 2px solid var(--ow-bright-blue);
+      border-radius: 50px;
+      padding: 10px 24px;
+      transition: all 0.25s ease;
+    }
+
+    .btn-ow-outline:hover {
+      background-color: var(--ow-pastel-blue);
+      color: var(--ow-navy);
+    }
+
+    /* Hero Section with Omah Wangi Pastel Blue Aesthetic */
+    .hero-section {
+      position: relative;
+      background: linear-gradient(180deg, #D0E8F7 0%, #E6F2FA 58%, #FFFFFF 100%);
+      padding: 68px 0 88px;
+      overflow: hidden;
+    }
+
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.92), rgba(43, 140, 190, 0.16));
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.85);
+      animation: floatBubble 8s infinite ease-in-out;
+      pointer-events: none;
+    }
+
+    @keyframes floatBubble {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-20px) scale(1.04); }
+    }
+
+    .halal-badge-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #fff;
+      border: 1.5px solid #CBD5E1;
+      border-radius: 14px;
+      padding: 8px 16px;
+      box-shadow: 0 4px 12px rgba(26, 54, 93, 0.06);
+    }
+
+    .hero-card-visual {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(12px);
+      border: 2px solid #fff;
+      border-radius: 28px;
+      padding: 26px;
+      box-shadow: 0 20px 45px rgba(26, 54, 93, 0.1);
+      position: relative;
+    }
+
+    .hero-header-img-wrapper {
+      width: 100%;
+      border-radius: 18px;
+      overflow: hidden;
+      background: linear-gradient(180deg, #E6F2FA 0%, #D0E8F7 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Section Styling */
+    .section-padding {
+      padding: 80px 0;
+    }
+
+    .section-badge {
+      display: inline-block;
+      background-color: var(--ow-pastel-blue);
+      color: var(--ow-bright-blue);
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-weight: 700;
+      font-size: 2.05rem;
+      color: var(--ow-navy);
+      margin-bottom: 14px;
+    }
+
+    /* Feature Cards */
+    .feature-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 26px 22px;
+      border: 1px solid #E2E8F0;
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--ow-bright-blue);
+      box-shadow: 0 15px 30px rgba(43, 140, 190, 0.12);
+    }
+
+    .feature-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      background: var(--ow-pastel-blue);
+      color: var(--ow-bright-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.55rem;
+      margin-bottom: 16px;
+    }
+
+    /* Sejarah / Timeline Cards */
+    .history-card {
+      background: #fff;
+      border-radius: 22px;
+      padding: 28px 24px;
+      border: 1.5px solid #DCEBFA;
+      height: 100%;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .history-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--ow-bright-blue);
+      box-shadow: 0 16px 34px rgba(43, 140, 190, 0.14);
+    }
+
+    .history-step-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, var(--ow-bright-blue), var(--ow-deep-blue));
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.78rem;
+      padding: 6px 14px;
+      border-radius: 50px;
+      margin-bottom: 14px;
+    }
+
+    .history-icon-circle {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.45rem;
+      margin-bottom: 16px;
+    }
+
+    .history-quote-box {
+      background: rgba(255, 255, 255, 0.88);
+      border-left: 5px solid var(--ow-pink);
+      border-radius: 18px;
+      padding: 24px 28px;
+      box-shadow: 0 10px 28px rgba(26, 54, 93, 0.06);
+    }
+
+    /* Product Cards */
+    .filter-btn {
+      border: 1.5px solid #CBD5E1;
+      background: #fff;
+      color: var(--ow-navy);
+      font-weight: 600;
+      font-size: 0.9rem;
+      border-radius: 50px;
+      padding: 8px 18px;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--ow-bright-blue);
+      border-color: var(--ow-bright-blue);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(43, 140, 190, 0.25);
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 22px;
+      border: 1px solid #E2E8F0;
+      overflow: hidden;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 18px 36px rgba(26, 54, 93, 0.1);
+      border-color: #90CDF4;
+    }
+
+    .product-visual {
+      padding: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      height: 235px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .product-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 14px;
+      transition: transform 0.35s ease;
+    }
+
+    .product-card:hover .product-photo {
+      transform: scale(1.06);
+    }
+
+    .size-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--ow-navy);
+      font-weight: 700;
+      font-size: 0.76rem;
+      padding: 4px 11px;
+      border-radius: 50px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .aroma-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      z-index: 2;
+      font-weight: 600;
+      font-size: 0.74rem;
+      padding: 4px 10px;
+      border-radius: 50px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    /* Division / Organization Cards */
+    .division-card {
+      background: #fff;
+      border-radius: 22px;
+      padding: 26px;
+      border: 1px solid #E2E8F0;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .division-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(90deg, var(--ow-bright-blue), var(--ow-pink));
+    }
+
+    .division-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 32px rgba(26, 54, 93, 0.09);
+    }
+
+    /* Marketplace & Social Cards */
+    .marketplace-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      border-radius: 18px;
+      background: #fff;
+      border: 1.5px solid #E2E8F0;
+      text-decoration: none;
+      color: var(--ow-navy);
+      transition: all 0.25s ease;
+    }
+
+    .marketplace-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px rgba(26, 54, 93, 0.08);
+      border-color: var(--ow-bright-blue);
+      color: var(--ow-navy);
+    }
+
+    .mp-icon-box {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .social-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 18px;
+      border-radius: 16px;
+      background: #fff;
+      border: 1.5px solid #E2E8F0;
+      color: var(--ow-navy);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .social-pill:hover {
+      transform: translateY(-3px);
+      border-color: var(--ow-bright-blue);
+      background-color: var(--ow-pastel-blue);
+      color: var(--ow-navy);
+      box-shadow: 0 8px 18px rgba(43, 140, 190, 0.14);
+    }
+
+    .cs-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background-color: #F8FBFE;
+      border: 1px solid #DCEBFA;
+      transition: all 0.2s ease;
+    }
+
+    .cs-item:hover {
+      background-color: var(--ow-pastel-blue);
+      border-color: var(--ow-bright-blue);
+    }
+
+    /* Opening Hours Box */
+    .opening-hours-box {
+      background: linear-gradient(135deg, #F0FDF4 0%, #E6F2FA 100%);
+      border: 1.5px solid #86EFAC;
+      border-radius: 16px;
+      padding: 14px 18px;
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-wa {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9998;
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: #fff !important;
+      border-radius: 50px;
+      padding: 13px 22px;
+      font-weight: 700;
+      font-size: 0.94rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 28px rgba(18, 140, 126, 0.38);
+      transition: all 0.25s ease;
+    }
+
+    .floating-wa:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 14px 32px rgba(18, 140, 126, 0.48);
+      color: #fff !important;
+    }
+
+    /* Footer */
+    .footer-custom {
+      background-color: var(--ow-navy);
+      color: #CBD5E1;
+      padding-top: 64px;
+      padding-bottom: 36px;
+    }
+
+    .footer-custom h5 {
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .footer-custom a {
+      color: #CBD5E1;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-custom a:hover {
+      color: #7CC4FA;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <div class="d-flex flex-wrap align-items-center gap-3">
+        <a href="https://maps.app.goo.gl/XJWpaa8mebkVgXg37" target="_blank" rel="noopener">
+          <i class="bi bi-geo-alt-fill me-1 text-info"></i> Outlet Resmi Omah Wangi Babarsari, Yogyakarta
+        </a>
+        <span class="d-none d-md-inline text-white-50">|</span>
+        <span class="d-none d-lg-inline text-light">
+          <i class="bi bi-clock-fill me-1 text-warning"></i> Buka Setiap Hari: 07.00 – 19.00 WIB
+        </span>
+        <span class="badge bg-light text-dark rounded-pill px-2 py-1">
+          <i class="bi bi-patch-check-fill text-success me-1"></i> Bersertifikat Halal Indonesia
+        </span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <span class="d-none d-sm-inline text-white-50 small">Ikuti Kami:</span>
+        <a href="https://www.instagram.com/omah.wangi/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.facebook.com/omahwangiinside/?_rdr" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.tiktok.com/@omah.wangi" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+        <a href="https://www.youtube.com/@omahwangi8979" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        <a href="https://x.com/OWINomahwangi" target="_blank" rel="noopener" aria-label="X Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.threads.com/@omah.wangi" target="_blank" rel="noopener" aria-label="Threads"><i class="bi bi-threads"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+      <!-- Brand Logo dari assets/img/logo.png dengan fallback SVG otomatis -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#beranda">
+        <img src="assets/img/logo.png" alt="Logo Omah Wangi" width="44" height="44" style="object-fit: contain; border-radius: 10px;" onerror="this.style.display='none'; document.getElementById('headerLogoFallback').style.display='block';">
+        <svg id="headerLogoFallback" style="display: none;" width="42" height="42" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 10L88 38V85H12V38L50 10Z" stroke="#E83E8C" stroke-width="7" stroke-linejoin="round" fill="#FCE7F3"/>
+          <path d="M26 54C26 42 38 35 48 42C38 48 33 56 26 54Z" fill="#48BB78"/>
+          <path d="M74 54C74 42 62 35 52 42C62 48 67 56 74 54Z" fill="#48BB78"/>
+          <circle cx="50" cy="58" r="19" fill="#2B8CBE"/>
+          <circle cx="44" cy="52" r="5" fill="#FFFFFF" fill-opacity="0.75"/>
+          <circle cx="56" cy="63" r="3" fill="#FFFFFF" fill-opacity="0.55"/>
+        </svg>
+        <div>
+          <span class="fw-extrabold fs-4" style="color: #E83E8C; letter-spacing: -0.5px;">OMAH</span>
+          <span class="fw-extrabold fs-4" style="color: #1A365D; letter-spacing: -0.5px;">WANGI</span>
+          <span class="d-block text-muted" style="font-size: 0.68rem; margin-top: -5px; font-weight: 700;">DETERJEN & PEWANGI HALAL</span>
+        </div>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
+          <li class="nav-item"><a class="nav-link active" href="#beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tentang">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sejarah">Sejarah</a></li>
+          <li class="nav-item"><a class="nav-link" href="#produk">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tim">Tim & Divisi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontak">Marketplace & Kontak</a></li>
+        </ul>
+        <div class="d-flex flex-wrap align-items-center gap-2">
+          <a href="https://api.whatsapp.com/send/?phone=62882007594517&text=Halo+OWIN%2C%0ASaya+baru+saja+melihat+website+Anda+dan+tertarik+dengan+produk+Omah+Wangi%2C+dan+ingin+menanyakan%3A%0A%2A+Apakah+bisa+saya+beli+langsung+di+outlet+resmi%3F+Dimana+alamat+outlet+terdekat+dari+%5Blokasi+saya%5D%3F%0A%2A+Kalau+lewat+toko+retail%2Fdistributor%2C+toko+terdekat+yang+menjual+produk+ini+ada+dimana+ya%3F%0A%2A+Untuk+pembelian+online%2C+apakah+tersedia+di+marketplace%3F%0AMohon+informasinya+ya.+Terima+kasih&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="btn btn-wa">
+            <i class="bi bi-whatsapp me-1"></i> Chat WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="beranda" class="hero-section">
+    <!-- Decorative Soap Bubbles -->
+    <div class="bubble" style="width: 95px; height: 95px; top: 8%; left: 5%;"></div>
+    <div class="bubble" style="width: 56px; height: 56px; top: 66%; left: 10%; animation-delay: 2s;"></div>
+    <div class="bubble" style="width: 115px; height: 115px; top: 15%; right: 7%; animation-delay: 1s;"></div>
+    <div class="bubble" style="width: 72px; height: 72px; bottom: 10%; right: 14%; animation-delay: 3s;"></div>
+
+    <div class="container position-relative">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6">
+          <div class="halal-badge-box mb-4">
+            <svg width="30" height="36" viewBox="0 0 60 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 4L52 24V58L30 68L8 58V24L30 4Z" stroke="#1A365D" stroke-width="4" fill="#F8FAFC"/>
+              <path d="M30 14V54M20 28L30 20L40 28M22 44H38" stroke="#1A365D" stroke-width="3.5" stroke-linecap="round"/>
+            </svg>
+            <div>
+              <span class="d-block fw-bold text-dark" style="font-size: 0.82rem; line-height: 1.1;">HALAL INDONESIA</span>
+              <span class="text-muted" style="font-size: 0.72rem;">Terjamin Bersih, Suci & Aman untuk Keluarga</span>
+            </div>
+          </div>
+
+          <h1 class="display-5 fw-bold mb-3" style="line-height: 1.2;">
+            Kesegaran Wangi Tahan Lama untuk <span style="color: var(--ow-bright-blue);">Pakaian Keluarga</span> Anda
+          </h1>
+          <p class="lead text-secondary mb-4" style="font-size: 1.06rem;">
+            <strong>UMKM Omah Wangi</strong> menghadirkan rangkaian deterjen cair dan deterjen kapsul modern dengan formula pembersih mendalam, lembut di tangan, serta aroma mewah pilihan (<em>Blossom, Akasia, Snappy, & Ocean</em>).
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="#produk" class="btn btn-ow-primary px-4 py-3 fs-6">
+              <i class="bi bi-grid-fill me-2"></i> Lihat Katalog Produk
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=62882007594517&text=Halo+OWIN%2C%0ASaya+baru+saja+melihat+website+Anda+dan+tertarik+dengan+produk+Omah+Wangi%2C+dan+ingin+menanyakan%3A%0A%2A+Apakah+bisa+saya+beli+langsung+di+outlet+resmi%3F+Dimana+alamat+outlet+terdekat+dari+%5Blokasi+saya%5D%3F%0A%2A+Kalau+lewat+toko+retail%2Fdistributor%2C+toko+terdekat+yang+menjual+produk+ini+ada+dimana+ya%3F%0A%2A+Untuk+pembelian+online%2C+apakah+tersedia+di+marketplace%3F%0AMohon+informasinya+ya.+Terima+kasih&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="btn btn-wa px-4 py-3 fs-6">
+              <i class="bi bi-whatsapp me-2"></i> WhatsApp Official
+            </a>
+          </div>
+
+          <div class="row g-3 pt-2">
+            <div class="col-6">
+              <div class="bg-white bg-opacity-85 rounded-4 p-3 text-center border border-white shadow-sm">
+                <h4 class="fw-bold mb-0 text-primary">8</h4>
+                <small class="text-muted fw-semibold">Varian Produk</small>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="bg-white bg-opacity-85 rounded-4 p-3 text-center border border-white shadow-sm">
+                <h4 class="fw-bold mb-0 text-success">100%</h4>
+                <small class="text-muted fw-semibold">Halal Indonesia</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Image Card (Grid 4 Foto Produk Unggulan) -->
+        <div class="col-lg-6">
+          <div class="hero-card-visual">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge rounded-pill px-3 py-2" style="background-color: var(--ow-pastel-blue); color: var(--ow-navy);">
+                <i class="bi bi-stars text-primary me-1"></i> Deterjen Cair & Kapsul Halal
+              </span>
+              <span class="text-muted small fw-semibold"><i class="bi bi-shield-check text-success"></i> Wangi Tahan Lama</span>
+            </div>
+
+            <div class="hero-header-img-wrapper p-3">
+              <div class="row g-2 w-100">
+                <div class="col-6">
+                  <img src="assets/img/blossom 1000 ml.jpeg" alt="Deterjen Blossom 1000 ml" class="img-fluid rounded-3 bg-white p-2 w-100" style="height: 150px; object-fit: contain;" onerror="this.onerror=null; this.src='assets/img/logo.png';">
+                </div>
+                <div class="col-6">
+                  <img src="assets/img/ocean 1000 ml.jpeg" alt="Deterjen Ocean 1000 ml" class="img-fluid rounded-3 bg-white p-2 w-100" style="height: 150px; object-fit: contain;" onerror="this.onerror=null; this.src='assets/img/logo.png';">
+                </div>
+                <div class="col-6">
+                  <img src="assets/img/kapsul akasia.jpeg" alt="Deterjen Kapsul Akasia" class="img-fluid rounded-3 bg-white p-2 w-100" style="height: 150px; object-fit: contain;" onerror="this.onerror=null; this.src='assets/img/logo.png';">
+                </div>
+                <div class="col-6">
+                  <img src="assets/img/kapsul blossom.jpeg" alt="Deterjen Kapsul Blossom" class="img-fluid rounded-3 bg-white p-2 w-100" style="height: 150px; object-fit: contain;" onerror="this.onerror=null; this.src='assets/img/logo.png';">
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mt-3 pt-2">
+              <div>
+                <div class="fw-bold text-dark">Kemasan Praktis & Ekonomis</div>
+                <small class="text-muted">Tersedia Botol 240 ml, 620 ml, 1000 ml & Kapsul</small>
+              </div>
+              <a href="#kontak" class="btn btn-sm btn-ow-primary">
+                Belanja Online <i class="bi bi-bag-heart ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tentang Kami & Keunggulan -->
+  <section id="tentang" class="section-padding bg-white">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-5">
+          <div class="p-4 rounded-4" style="background: linear-gradient(135deg, #E6F2FA 0%, #FCE7F3 100%); border: 2px solid #fff; box-shadow: 0 15px 35px rgba(26, 54, 93, 0.08);">
+            <div class="bg-white rounded-4 p-4 text-center">
+              <div class="mb-3">
+                <span class="badge rounded-pill px-3 py-2" style="background-color: var(--ow-soft-pink); color: var(--ow-pink); font-weight: 700;">
+                  PROFIL UMKM OMAH WANGI
+                </span>
+              </div>
+              <h3 class="fw-bold mb-3">Bersih Higienis, Wangi Sepanjang Hari</h3>
+              <p class="text-secondary small mb-4">
+                <strong>Omah Wangi</strong> adalah UMKM lokal yang berfokus memproduksi kebutuhan kebersihan pakaian rumah tangga dan usaha laundry. Setiap produk diracik dengan bahan aktif pembersih pilihan yang aman untuk mesin cuci bukaan atas/depan maupun cuci tangan, serta telah mengantongi sertifikasi <strong>Halal Indonesia</strong>.
+              </p>
+              <div class="d-grid gap-2">
+                <a href="https://maps.app.goo.gl/XJWpaa8mebkVgXg37" target="_blank" rel="noopener" class="btn btn-ow-primary">
+                  <i class="bi bi-geo-alt-fill me-2"></i> Lihat Lokasi Outlet di Google Maps
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <span class="section-badge">Tentang Kami</span>
+          <h2 class="section-title">Kualitas Deterjen Modern Kebanggaan UMKM Indonesia</h2>
+          <p class="text-secondary mb-4">
+            Setiap botol dan kapsul deterjen Omah Wangi diproses melalui kontrol kualitas yang ketat untuk menghadirkan pakaian yang bersih cemerlang, bebas bau apek, dan harum menenangkan bagi seluruh anggota keluarga.
+          </p>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="feature-card">
+                <div class="feature-icon"><i class="bi bi-patch-check-fill"></i></div>
+                <h5 class="fw-bold">Bersertifikat Halal Indonesia</h5>
+                <p class="text-muted small mb-0">Diproduksi menggunakan bahan baku halal, suci, dan ramah lingkungan sehingga menenangkan hati keluarga.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="feature-card">
+                <div class="feature-icon" style="background: #FCE7F3; color: #E83E8C;"><i class="bi bi-flower1"></i></div>
+                <h5 class="fw-bold">4 Aroma Mewah Pilihan</h5>
+                <p class="text-muted small mb-0">Tersedia varian keharuman favorit: <strong>Blossom, Akasia, Snappy, dan Ocean</strong> yang melekat lembut di serat kain.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="feature-card">
+                <div class="feature-icon" style="background: #E6FFFA; color: #319795;"><i class="bi bi-droplet-half"></i></div>
+                <h5 class="fw-bold">Cocok Mesin Cuci & Cuci Tangan</h5>
+                <p class="text-muted small mb-0">Formula rendah busa berlebih yang aman untuk segala jenis mesin cuci sekaligus lembut di kulit tangan.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="feature-card">
+                <div class="feature-icon" style="background: #FFFBEB; color: #D97706;"><i class="bi bi-box-seam-fill"></i></div>
+                <h5 class="fw-bold">Pilihan Kemasan Lengkap</h5>
+                <p class="text-muted small mb-0">Mulai dari botol praktis 240 ml, kemasan 620 ml, botol keluarga 1000 ml, hingga deterjen kapsul sekali cemplung.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sejarah & Perjalanan UMKM Omah Wangi -->
+  <section id="sejarah" class="section-padding" style="background: linear-gradient(180deg, #EBF5FC 0%, #F8FBFE 100%);">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-badge">Sejarah & Perjalanan</span>
+        <h2 class="section-title">Kisah Tumbuhnya UMKM Omah Wangi</h2>
+        <p class="text-secondary mx-auto" style="max-width: 680px;">
+          Berawal dari semangat menghadirkan produk kebersihan pakaian yang aman, ramah lingkungan, dan terjangkau bagi masyarakat Yogyakarta hingga kini melayani pelanggan di seluruh Indonesia.
+        </p>
+      </div>
+
+      <div class="row g-4 mb-4">
+        <!-- Fase 1 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="history-card">
+            <span class="history-step-badge"><i class="bi bi-flag-fill"></i> Tahap 01 • Awal Berdiri</span>
+            <div class="history-icon-circle" style="background: #FCE7F3; color: #E83E8C;">
+              <i class="bi bi-house-heart-fill"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Lahir dari Kebutuhan Rumah Tangga & Laundry</h5>
+            <p class="text-muted small mb-0">
+              Omah Wangi dirintis di Yogyakarta sebagai usaha rumahan yang meracik formula deterjen cair berkualitas dengan keharuman tahan lama dan harga ekonomis untuk keluarga serta pelaku usaha laundry lokal.
+            </p>
+          </div>
+        </div>
+
+        <!-- Fase 2 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="history-card">
+            <span class="history-step-badge"><i class="bi bi-patch-check-fill"></i> Tahap 02 • Standarisasi</span>
+            <div class="history-icon-circle" style="background: #E6FFFA; color: #2C7A7B;">
+              <i class="bi bi-shield-fill-check"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Raih Sertifikasi Halal Indonesia</h5>
+            <p class="text-muted small mb-0">
+              Sebagai wujud komitmen terhadap kualitas dan keamanan konsumen, Omah Wangi menstandarisasi bahan baku dan alur produksi hingga resmi mengantongi sertifikat <strong>Halal Indonesia</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Fase 3 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="history-card">
+            <span class="history-step-badge"><i class="bi bi-stars"></i> Tahap 03 • Inovasi Varian</span>
+            <div class="history-icon-circle" style="background: #E6F2FA; color: #2B8CBE;">
+              <i class="bi bi-droplet-fill"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Ekspansi Ukuran & Deterjen Kapsul</h5>
+            <p class="text-muted small mb-0">
+              Mendengarkan masukan pelanggan, Omah Wangi mengembangkan berbagai ukuran botol (240 ml, 620 ml, hingga 1000 ml) serta meluncurkan inovasi modern <strong>Deterjen Kapsul</strong> aroma Akasia dan Blossom.
+            </p>
+          </div>
+        </div>
+
+        <!-- Fase 4 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="history-card">
+            <span class="history-step-badge"><i class="bi bi-globe2"></i> Tahap 04 • Transformasi Digital</span>
+            <div class="history-icon-circle" style="background: #FFFBEB; color: #D97706;">
+              <i class="bi bi-shop"></i>
+            </div>
+            <h5 class="fw-bold mb-2">Outlet Babarsari & Official Store Nasional</h5>
+            <p class="text-muted small mb-0">
+              Kini Omah Wangi hadir melayani pembelian langsung di <strong>Outlet Resmi Babarsari, Sleman</strong> serta menjangkau pelanggan seluruh Nusantara melalui Shopee, Tokopedia, Lazada, dan TikTok Shop.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kutipan Filosofi Nama Omah Wangi -->
+      <div class="history-quote-box">
+        <div class="row align-items-center gy-3">
+          <div class="col-lg-9">
+            <h5 class="fw-bold mb-1" style="color: var(--ow-navy);">
+              <i class="bi bi-quote text-primary me-1"></i> Makna di Balik Nama "Omah Wangi"
+            </h5>
+            <p class="text-secondary small mb-0">
+              Dalam bahasa Jawa, <em>"Omah"</em> berarti <strong>Rumah</strong> dan <em>"Wangi"</em> berarti <strong>Harum</strong>. Filosofi ini mencerminkan harapan kami agar setiap produk Omah Wangi mampu menghadirkan keharuman, kebersihan, dan kenyamanan di setiap rumah keluarga Indonesia.
+            </p>
+          </div>
+          <div class="col-lg-3 text-lg-end">
+            <a href="#produk" class="btn btn-ow-primary btn-sm px-4 py-2">
+              Jelajahi Produk Kami <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Katalog 8 Produk Resmi Omah Wangi -->
+  <section id="produk" class="section-padding" style="background-color: #F4F9FD;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-badge">Katalog Resmi</span>
+        <h2 class="section-title">8 Produk Unggulan Omah Wangi</h2>
+        <p class="text-secondary mx-auto" style="max-width: 660px;">
+          Temukan varian aroma dan ukuran kemasan yang paling pas untuk kebutuhan mencuci Anda. Klik foto produk untuk melihat kemasan lebih besar, atau pesan langsung via WhatsApp OWIN & Marketplace.
+        </p>
+      </div>
+
+      <!-- Filter & Search Controls -->
+      <div class="row g-3 align-items-center justify-content-between mb-4">
+        <div class="col-lg-8 d-flex flex-wrap gap-2" id="productFilters">
+          <button class="filter-btn active" data-filter="all">Semua (8)</button>
+          <button class="filter-btn" data-filter="240ml">Botol 240 ml</button>
+          <button class="filter-btn" data-filter="620ml">Botol 620 ml</button>
+          <button class="filter-btn" data-filter="1000ml">Botol 1000 ml</button>
+          <button class="filter-btn" data-filter="kapsul">Deterjen Kapsul</button>
+        </div>
+        <div class="col-lg-4">
+          <div class="input-group">
+            <span class="input-group-text bg-white border-end-0 rounded-start-pill ps-3">
+              <i class="bi bi-search text-muted"></i>
+            </span>
+            <input type="text" id="productSearch" class="form-control border-start-0 rounded-end-pill py-2" placeholder="Cari varian aroma (Blossom, Akasia, Ocean...)">
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="row g-4" id="productGrid">
+        <!-- Rendered dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Struktur Tim & Divisi UMKM (Owner, Purchasing, Gudang, Kasir) -->
+  <section id="tim" class="section-padding bg-white">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-badge">Struktur Organisasi</span>
+        <h2 class="section-title">Tim Profesional di Balik Omah Wangi</h2>
+        <p class="text-secondary mx-auto" style="max-width: 650px;">
+          Kepercayaan pelanggan didukung oleh kerja sama empat divisi utama yang menjaga ketersediaan bahan baku, kualitas produksi, stok gudang, hingga pelayanan kasir yang ramah.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Owner -->
+        <div class="col-lg-3 col-md-6">
+          <div class="division-card text-center">
+            <div class="mx-auto mb-3 d-flex align-items-center justify-content-center rounded-circle" style="width: 72px; height: 72px; background: #E6F2FA; color: #1A365D; font-size: 1.9rem;">
+              <i class="bi bi-award-fill"></i>
+            </div>
+            <span class="badge rounded-pill px-3 py-1 mb-2" style="background: #E6F2FA; color: #1A365D;">Pimpinan UMKM</span>
+            <h4 class="fw-bold mb-2">Owner</h4>
+            <p class="text-muted small mb-0">
+              Menetapkan arah pengembangan produk, menjamin standar kualitas <strong>Halal Indonesia</strong>, serta memperluas kemitraan outlet dan distribusi Omah Wangi.
+            </p>
+          </div>
+        </div>
+
+        <!-- Purchasing -->
+        <div class="col-lg-3 col-md-6">
+          <div class="division-card text-center">
+            <div class="mx-auto mb-3 d-flex align-items-center justify-content-center rounded-circle" style="width: 72px; height: 72px; background: #FCE7F3; color: #E83E8C; font-size: 1.9rem;">
+              <i class="bi bi-bag-check-fill"></i>
+            </div>
+            <span class="badge rounded-pill px-3 py-1 mb-2" style="background: #FCE7F3; color: #E83E8C;">Pengadaan Bahan</span>
+            <h4 class="fw-bold mb-2">Purchasing</h4>
+            <p class="text-muted small mb-0">
+              Menyeleksi bibit parfum premium (<em>Blossom, Akasia, Snappy, Ocean</em>), bahan aktif pembersih ramah lingkungan, serta botol kemasan higienis dari pemasok terpercaya.
+            </p>
+          </div>
+        </div>
+
+        <!-- Gudang -->
+        <div class="col-lg-3 col-md-6">
+          <div class="division-card text-center">
+            <div class="mx-auto mb-3 d-flex align-items-center justify-content-center rounded-circle" style="width: 72px; height: 72px; background: #E6FFFA; color: #2C7A7B; font-size: 1.9rem;">
+              <i class="bi bi-boxes"></i>
+            </div>
+            <span class="badge rounded-pill px-3 py-1 mb-2" style="background: #E6FFFA; color: #2C7A7B;">Penyimpanan & Stok</span>
+            <h4 class="fw-bold mb-2">Gudang</h4>
+            <p class="text-muted small mb-0">
+              Menjaga tata kelola penyimpanan seluruh varian 240 ml, 620 ml, 1000 ml, dan kapsul dengan sistem <em>FIFO</em> agar setiap produk tiba di tangan pelanggan dalam kondisi prima.
+            </p>
+          </div>
+        </div>
+
+        <!-- Kasir -->
+        <div class="col-lg-3 col-md-6">
+          <div class="division-card text-center">
+            <div class="mx-auto mb-3 d-flex align-items-center justify-content-center rounded-circle" style="width: 72px; height: 72px; background: #EFF6FF; color: #2B8CBE; font-size: 1.9rem;">
+              <i class="bi bi-calculator-fill"></i>
+            </div>
+            <span class="badge rounded-pill px-3 py-1 mb-2" style="background: #EFF6FF; color: #2B8CBE;">Transaksi & Pelayanan</span>
+            <h4 class="fw-bold mb-2">Kasir</h4>
+            <p class="text-muted small mb-0">
+              Melayani transaksi pembelian pelanggan secara langsung di outlet resmi Omah Wangi dengan cepat, ramah, akurat, dan menyediakan berbagai metode pembayaran.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Official Store, Media Sosial, Layanan Pelanggan & Lokasi Outlet -->
+  <section id="kontak" class="section-padding" style="background: linear-gradient(180deg, #F4F9FD 0%, #E6F2FA 100%);">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="section-badge">Belanja & Hubungi Kami</span>
+        <h2 class="section-title">Official Store, Media Sosial & Outlet Babarsari</h2>
+        <p class="text-secondary mx-auto" style="max-width: 680px;">
+          Dapatkan produk asli <strong>Omah Wangi</strong> melalui marketplace resmi, konsultasi langsung dengan admin OWIN via WhatsApp, atau kunjungi outlet resmi kami di Babarsari, Yogyakarta.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Kolom Kiri: Official Marketplace & WhatsApp Order -->
+        <div class="col-lg-6">
+          <div class="bg-white rounded-4 p-4 shadow-sm border h-100">
+            <h4 class="fw-bold mb-1"><i class="bi bi-bag-check-fill text-primary me-2"></i> Official Store & Pemesanan Online</h4>
+            <p class="text-muted small mb-4">Klik kanal belanja resmi di bawah ini untuk memesan produk Omah Wangi dengan aman:</p>
+
+            <div class="d-grid gap-3">
+              <!-- WhatsApp Official OWIN -->
+              <a href="https://api.whatsapp.com/send/?phone=62882007594517&text=Halo+OWIN%2C%0ASaya+baru+saja+melihat+website+Anda+dan+tertarik+dengan+produk+Omah+Wangi%2C+dan+ingin+menanyakan%3A%0A%2A+Apakah+bisa+saya+beli+langsung+di+outlet+resmi%3F+Dimana+alamat+outlet+terdekat+dari+%5Blokasi+saya%5D%3F%0A%2A+Kalau+lewat+toko+retail%2Fdistributor%2C+toko+terdekat+yang+menjual+produk+ini+ada+dimana+ya%3F%0A%2A+Untuk+pembelian+online%2C+apakah+tersedia+di+marketplace%3F%0AMohon+informasinya+ya.+Terima+kasih&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="marketplace-card" style="border-color: #86EFAC; background-color: #F0FDF4;">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="mp-icon-box" style="background: linear-gradient(135deg, #25D366, #128C7E);">
+                    <i class="bi bi-whatsapp"></i>
+                  </div>
+                  <div>
+                    <div class="fw-bold text-dark">WhatsApp Official OWIN (Online Store)</div>
+                    <small class="text-success fw-semibold">0882 0075 94517 • Tanya Outlet & Order Langsung</small>
+                  </div>
+                </div>
+                <i class="bi bi-arrow-up-right-circle-fill fs-4 text-success"></i>
+              </a>
+
+              <!-- Shopee -->
+              <a href="https://s.shopee.co.id/6L6A2wW44m" target="_blank" rel="noopener" class="marketplace-card">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="mp-icon-box" style="background: linear-gradient(135deg, #EE4D2D, #FF7337);">
+                    <i class="bi bi-bag-fill"></i>
+                  </div>
+                  <div>
+                    <div class="fw-bold text-dark">Shopee Official Store</div>
+                    <small class="text-muted">Omah Wangi Official • Gratis Ongkir & Voucher</small>
+                  </div>
+                </div>
+                <i class="bi bi-box-arrow-up-right fs-5 text-muted"></i>
+              </a>
+
+              <!-- Tokopedia -->
+              <a href="https://www.tokopedia.com/omahwangiku" target="_blank" rel="noopener" class="marketplace-card">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="mp-icon-box" style="background: linear-gradient(135deg, #03AC0E, #42B549);">
+                    <i class="bi bi-shop-window"></i>
+                  </div>
+                  <div>
+                    <div class="fw-bold text-dark">Tokopedia Official</div>
+                    <small class="text-muted">tokopedia.com/omahwangiku</small>
+                  </div>
+                </div>
+                <i class="bi bi-box-arrow-up-right fs-5 text-muted"></i>
+              </a>
+
+              <!-- Lazada -->
+              <a href="https://www.lazada.co.id/shop/omah-wangi" target="_blank" rel="noopener" class="marketplace-card">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="mp-icon-box" style="background: linear-gradient(135deg, #0F146D, #F57224);">
+                    <i class="bi bi-cart-check-fill"></i>
+                  </div>
+                  <div>
+                    <div class="fw-bold text-dark">Lazada Official Store</div>
+                    <small class="text-muted">lazada.co.id/shop/omah-wangi</small>
+                  </div>
+                </div>
+                <i class="bi bi-box-arrow-up-right fs-5 text-muted"></i>
+              </a>
+
+              <!-- TikTok Shop -->
+              <a href="https://www.tiktok.com/@omah.wangi" target="_blank" rel="noopener" class="marketplace-card">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="mp-icon-box" style="background: linear-gradient(135deg, #111827, #374151);">
+                    <i class="bi bi-tiktok"></i>
+                  </div>
+                  <div>
+                    <div class="fw-bold text-dark">TikTok Shop & Official Account</div>
+                    <small class="text-muted">@omah.wangi • Promo Live & Video</small>
+                  </div>
+                </div>
+                <i class="bi bi-box-arrow-up-right fs-5 text-muted"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kolom Kanan: Layanan Pelanggan & Media Sosial Resmi -->
+        <div class="col-lg-6">
+          <div class="d-flex flex-column gap-4 h-100">
+            <!-- Layanan Pelanggan -->
+            <div class="bg-white rounded-4 p-4 shadow-sm border">
+              <h4 class="fw-bold mb-1"><i class="bi bi-headset text-primary me-2"></i> Layanan Pelanggan Omah Wangi</h4>
+              <p class="text-muted small mb-3">Hubungi nomor layanan sesuai kebutuhan Anda:</p>
+
+              <div class="d-grid gap-2">
+                <a href="https://wa.me/6282220676557?text=Halo%20Omah%20Wangi%2C%20saya%20ingin%20menanyakan%20informasi%20produk%20%26%20outlet." target="_blank" rel="noopener" class="cs-item text-decoration-none">
+                  <div>
+                    <div class="fw-bold text-dark small">Informasi Produk & Outlet</div>
+                    <span class="text-primary fw-bold">0822 2067 6557</span>
+                  </div>
+                  <span class="badge bg-success rounded-pill px-3 py-2"><i class="bi bi-whatsapp me-1"></i> Hubungi</span>
+                </a>
+
+                <a href="https://wa.me/6282220676557?text=Halo%20Omah%20Wangi%2C%20saya%20ingin%20menyampaikan%20saran%20%26%20kritik." target="_blank" rel="noopener" class="cs-item text-decoration-none">
+                  <div>
+                    <div class="fw-bold text-dark small">Saran & Kritik</div>
+                    <span class="text-primary fw-bold">0822 2067 6557</span>
+                  </div>
+                  <span class="badge bg-success rounded-pill px-3 py-2"><i class="bi bi-whatsapp me-1"></i> Hubungi</span>
+                </a>
+
+                <a href="https://wa.me/6289519291177?text=Halo%20Omah%20Wangi%2C%20saya%20ingin%20menanyakan%20informasi%20lowongan%20kerja%20(Lowker)." target="_blank" rel="noopener" class="cs-item text-decoration-none">
+                  <div>
+                    <div class="fw-bold text-dark small">Informasi Lowker</div>
+                    <span class="text-primary fw-bold">0895 1929 1177</span>
+                  </div>
+                  <span class="badge bg-success rounded-pill px-3 py-2"><i class="bi bi-whatsapp me-1"></i> Hubungi</span>
+                </a>
+
+                <a href="https://api.whatsapp.com/send/?phone=62882007594517&text=Halo+OWIN%2C%0ASaya+baru+saja+melihat+website+Anda+dan+tertarik+dengan+produk+Omah+Wangi%2C+dan+ingin+menanyakan%3A%0A%2A+Apakah+bisa+saya+beli+langsung+di+outlet+resmi%3F+Dimana+alamat+outlet+terdekat+dari+%5Blokasi+saya%5D%3F%0A%2A+Kalau+lewat+toko+retail%2Fdistributor%2C+toko+terdekat+yang+menjual+produk+ini+ada+dimana+ya%3F%0A%2A+Untuk+pembelian+online%2C+apakah+tersedia+di+marketplace%3F%0AMohon+informasinya+ya.+Terima+kasih&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="cs-item text-decoration-none">
+                  <div>
+                    <div class="fw-bold text-dark small">Online Store</div>
+                    <span class="text-primary fw-bold">0882 0075 94517</span>
+                  </div>
+                  <span class="badge bg-success rounded-pill px-3 py-2"><i class="bi bi-whatsapp me-1"></i> Order</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Media Sosial Resmi -->
+            <div class="bg-white rounded-4 p-4 shadow-sm border flex-grow-1">
+              <h4 class="fw-bold mb-1"><i class="bi bi-share-fill text-primary me-2"></i> Media Sosial Resmi</h4>
+              <p class="text-muted small mb-3">Ikuti pembaruan promo, tips mencuci, dan kegiatan UMKM Omah Wangi:</p>
+
+              <div class="d-flex flex-wrap gap-2">
+                <a href="https://www.instagram.com/omah.wangi/" target="_blank" rel="noopener" class="social-pill">
+                  <i class="bi bi-instagram fs-5" style="color: #E1306C;"></i> Instagram (@omah.wangi)
+                </a>
+                <a href="https://www.facebook.com/omahwangiinside/?_rdr" target="_blank" rel="noopener" class="social-pill">
+                  <i class="bi bi-facebook fs-5" style="color: #1877F2;"></i> Facebook (Omah Wangi)
+                </a>
+                <a href="https://www.tiktok.com/@omah.wangi" target="_blank" rel="noopener" class="social-pill">
+                  <i class="bi bi-tiktok fs-5 text-dark"></i> TikTok (@omah.wangi)
+                </a>
+                <a href="https://www.youtube.com/@omahwangi8979" target="_blank" rel="noopener" class="social-pill">
+                  <i class="bi bi-youtube fs-5" style="color: #FF0000;"></i> YouTube (@omahwangi8979)
+                </a>
+                <a href="https://x.com/OWINomahwangi" target="_blank" rel="noopener" class="social-pill">
+                  <i class="bi bi-twitter-x fs-5 text-dark"></i> X (@OWINomahwangi)
+                </a>
+                <a href="https://www.threads.com/@omah.wangi" target="_blank" rel="noopener" class="social-pill">
+                  <i class="bi bi-threads fs-5 text-dark"></i> Threads (@omah.wangi)
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Baris Bawah: Peta & Jam Buka Outlet Resmi Omah Wangi Babarsari -->
+        <div class="col-12">
+          <div class="bg-white rounded-4 p-4 shadow-sm border">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-5">
+                <span class="badge rounded-pill px-3 py-2 mb-2" style="background-color: var(--ow-pastel-blue); color: var(--ow-bright-blue); font-weight: 700;">
+                  <i class="bi bi-geo-alt-fill me-1"></i> LOKASI OUTLET RESMI
+                </span>
+                <h4 class="fw-bold mb-2">Omah Wangi Babarsari</h4>
+                <p class="text-secondary small mb-3">
+                  Kunjungi outlet resmi kami di kawasan <strong>Babarsari, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta</strong> untuk pembelian langsung eceran maupun kebutuhan laundry.
+                </p>
+
+                <!-- Jam Operasional Outlet -->
+                <div class="opening-hours-box mb-3">
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="d-flex align-items-center justify-content-center rounded-circle bg-success text-white flex-shrink-0" style="width: 42px; height: 42px;">
+                      <i class="bi bi-clock-fill fs-5"></i>
+                    </div>
+                    <div>
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="fw-bold text-dark small">Jam Buka Outlet</span>
+                        <span class="badge bg-success rounded-pill" style="font-size: 0.7rem;">Buka Setiap Hari</span>
+                      </div>
+                      <div class="fw-extrabold text-primary fs-6">07.00 – 19.00 WIB</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex flex-wrap gap-2">
+                  <a href="https://maps.app.goo.gl/XJWpaa8mebkVgXg37" target="_blank" rel="noopener" class="btn btn-ow-primary">
+                    <i class="bi bi-map-fill me-2"></i> Buka Rute di Google Maps
+                  </a>
+                  <a href="https://wa.me/6282220676557?text=Halo%20Omah%20Wangi%2C%20saya%20ingin%20menanyakan%20ketersediaan%20produk%20di%20Outlet%20Omah%20Wangi%20Babarsari." target="_blank" rel="noopener" class="btn btn-ow-outline">
+                    <i class="bi bi-whatsapp me-1 text-success"></i> Hubungi Outlet
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="rounded-4 overflow-hidden border" style="height: 310px;">
+                  <iframe
+                    src="https://maps.google.com/maps?q=Omah%20Wangi%20Babarsari%20Depok%20Sleman%20Yogyakarta&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lokasi Outlet Resmi Omah Wangi Babarsari">
+                  </iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row gy-4 pb-4 border-bottom border-secondary border-opacity-25">
+        <div class="col-lg-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <img src="assets/img/logo.png" alt="Logo Omah Wangi" width="38" height="38" style="object-fit: contain; background: #fff; padding: 3px; border-radius: 10px;" onerror="this.style.display='none'; document.getElementById('footerLogoFallback').style.display='block';">
+            <svg id="footerLogoFallback" style="display: none;" width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M50 10L88 38V85H12V38L50 10Z" stroke="#F687B3" stroke-width="7" stroke-linejoin="round" fill="#1A365D"/>
+              <circle cx="50" cy="58" r="19" fill="#2B8CBE"/>
+            </svg>
+            <h4 class="fw-bold text-white mb-0">OMAH WANGI</h4>
+          </div>
+          <p class="small text-light text-opacity-75 mb-2">
+            UMKM produsen deterjen cair dan deterjen kapsul berkualitas tinggi dengan sertifikasi <strong>Halal Indonesia</strong>. Wangi segar tahan lama untuk keluarga Indonesia.
+          </p>
+          <p class="small text-info fw-semibold mb-3">
+            <i class="bi bi-clock-fill me-1"></i> Outlet Babarsari Buka Setiap Hari: 07.00 – 19.00 WIB
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="https://www.instagram.com/omah.wangi/" target="_blank" rel="noopener" class="btn btn-sm btn-outline-light rounded-circle" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com/omahwangiinside/?_rdr" target="_blank" rel="noopener" class="btn btn-sm btn-outline-light rounded-circle" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.tiktok.com/@omah.wangi" target="_blank" rel="noopener" class="btn btn-sm btn-outline-light rounded-circle" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+            <a href="https://www.youtube.com/@omahwangi8979" target="_blank" rel="noopener" class="btn btn-sm btn-outline-light rounded-circle" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="https://x.com/OWINomahwangi" target="_blank" rel="noopener" class="btn btn-sm btn-outline-light rounded-circle" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.threads.com/@omah.wangi" target="_blank" rel="noopener" class="btn btn-sm btn-outline-light rounded-circle" aria-label="Threads"><i class="bi bi-threads"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6">
+          <h5>Navigasi</h5>
+          <ul class="list-unstyled d-grid gap-2 small">
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#tentang">Tentang Kami</a></li>
+            <li><a href="#sejarah">Sejarah</a></li>
+            <li><a href="#produk">Katalog Produk</a></li>
+            <li><a href="#tim">Struktur Organisasi</a></li>
+            <li><a href="#kontak">Marketplace & Kontak</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-6">
+          <h5>Official Marketplace</h5>
+          <ul class="list-unstyled d-grid gap-2 small">
+            <li><a href="https://s.shopee.co.id/6L6A2wW44m" target="_blank" rel="noopener"><i class="bi bi-bag-fill me-1"></i> Shopee Official</a></li>
+            <li><a href="https://www.tokopedia.com/omahwangiku" target="_blank" rel="noopener"><i class="bi bi-shop-window me-1"></i> Tokopedia Official</a></li>
+            <li><a href="https://www.lazada.co.id/shop/omah-wangi" target="_blank" rel="noopener"><i class="bi bi-cart-check-fill me-1"></i> Lazada Official</a></li>
+            <li><a href="https://www.tiktok.com/@omah.wangi" target="_blank" rel="noopener"><i class="bi bi-tiktok me-1"></i> TikTok Shop</a></li>
+            <li><a href="https://maps.app.goo.gl/XJWpaa8mebkVgXg37" target="_blank" rel="noopener"><i class="bi bi-geo-alt-fill me-1"></i> Outlet Babarsari</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h5>Layanan Pelanggan</h5>
+          <ul class="list-unstyled d-grid gap-2 small">
+            <li><span class="text-white-50">Info Produk & Outlet:</span><br><strong class="text-white">0822 2067 6557</strong></li>
+            <li><span class="text-white-50">Saran & Kritik:</span><br><strong class="text-white">0822 2067 6557</strong></li>
+            <li><span class="text-white-50">Informasi Lowker:</span><br><strong class="text-white">0895 1929 1177</strong></li>
+            <li><span class="text-white-50">Online Store (OWIN):</span><br><strong class="text-white">0882 0075 94517</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-4 d-flex flex-wrap justify-content-between align-items-center small text-white-50">
+        <div>&copy; 2026 <strong>UMKM Omah Wangi</strong>. Seluruh Hak Cipta Dilindungi.</div>
+        <div>Deterjen & Pewangi Pakaian Halal Indonesia</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Preview Foto Kemasan Produk -->
+  <div class="modal fade" id="productPreviewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4 border-0 shadow-lg overflow-hidden">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold" id="previewModalTitle">Detail Produk Omah Wangi</h5>
+          <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body text-center p-4">
+          <img id="previewModalImg" src="" alt="Foto Produk Omah Wangi" class="img-fluid rounded-4 mb-3" style="max-height: 360px; object-fit: contain;">
+          <p id="previewModalDesc" class="text-secondary small mb-3"></p>
+          <div class="d-flex justify-content-center gap-2">
+            <a id="previewModalWa" href="#" target="_blank" rel="noopener" class="btn btn-wa">
+              <i class="bi bi-whatsapp me-1"></i> Pesan via WhatsApp
+            </a>
+            <a href="https://s.shopee.co.id/6L6A2wW44m" target="_blank" rel="noopener" class="btn btn-shopee">
+              <i class="bi bi-bag-fill me-1"></i> Beli di Shopee
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp OWIN Button -->
+  <a href="https://api.whatsapp.com/send/?phone=62882007594517&text=Halo+OWIN%2C%0ASaya+baru+saja+melihat+website+Anda+dan+tertarik+dengan+produk+Omah+Wangi%2C+dan+ingin+menanyakan%3A%0A%2A+Apakah+bisa+saya+beli+langsung+di+outlet+resmi%3F+Dimana+alamat+outlet+terdekat+dari+%5Blokasi+saya%5D%3F%0A%2A+Kalau+lewat+toko+retail%2Fdistributor%2C+toko+terdekat+yang+menjual+produk+ini+ada+dimana+ya%3F%0A%2A+Untuk+pembelian+online%2C+apakah+tersedia+di+marketplace%3F%0AMohon+informasinya+ya.+Terima+kasih&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="floating-wa">
+    <i class="bi bi-whatsapp fs-5"></i>
+    <span>Tanya OWIN</span>
+  </a>
+
+  <!-- Bootstrap 5.3.3 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Data & Interactivity Script -->
+  <script>
+    const WA_OWIN_BASE = "https://api.whatsapp.com/send/?phone=62882007594517&text=";
+    const SHOPEE_URL = "https://s.shopee.co.id/6L6A2wW44m";
+
+    // Data Resmi 8 Produk Omah Wangi beserta path foto di folder assets/img/
+    const productsData = [
+      {
+        id: "OW-01",
+        name: "Deterjen Blossom 240 ml",
+        category: "240ml",
+        sizeLabel: "240 ml",
+        aroma: "Aroma Blossom",
+        badgeBg: "#FCE7F3",
+        badgeColor: "#D53F8C",
+        cardBg: "linear-gradient(180deg, #FFF5F8 0%, #FCE7F3 100%)",
+        image: "assets/img/blossom 240 ml.jpg",
+        description: "Kemasan botol praktis 240 ml dengan keharuman bunga Blossom yang lembut dan menyegarkan untuk cucian harian."
+      },
+      {
+        id: "OW-02",
+        name: "Deterjen Akasia 240 ml",
+        category: "240ml",
+        sizeLabel: "240 ml",
+        aroma: "Aroma Akasia",
+        badgeBg: "#E6FFFA",
+        badgeColor: "#2C7A7B",
+        cardBg: "linear-gradient(180deg, #F0FFF4 0%, #E6FFFA 100%)",
+        image: "assets/img/akasia 240 ml.jpeg",
+        description: "Botol ekonomis 240 ml dengan keharuman khas Akasia yang bersih, elegan, dan tahan lama di serat pakaian."
+      },
+      {
+        id: "OW-03",
+        name: "Deterjen Blossom 620 ml",
+        category: "620ml",
+        sizeLabel: "620 ml",
+        aroma: "Aroma Blossom",
+        badgeBg: "#FCE7F3",
+        badgeColor: "#D53F8C",
+        cardBg: "linear-gradient(180deg, #FFF5F8 0%, #FCE7F3 100%)",
+        image: "assets/img/blossom 620 ml.jpeg",
+        description: "Ukuran 620 ml favorit keluarga untuk membersihkan noda membandel sekaligus meninggalkan aroma Blossom yang manis."
+      },
+      {
+        id: "OW-04",
+        name: "Deterjen Snappy 620 ml",
+        category: "620ml",
+        sizeLabel: "620 ml",
+        aroma: "Aroma Snappy",
+        badgeBg: "#EBF8FF",
+        badgeColor: "#2B6CB0",
+        cardBg: "linear-gradient(180deg, #F0F8FF 0%, #E6F2FA 100%)",
+        image: "assets/img/snappy 620 ml.jpeg",
+        description: "Varian aroma Snappy yang energik dan segar dalam kemasan 620 ml, menjaga pakaian tetap wangi bebas bau apek."
+      },
+      {
+        id: "OW-05",
+        name: "Deterjen Blossom 1000 ml",
+        category: "1000ml",
+        sizeLabel: "1000 ml",
+        aroma: "Aroma Blossom",
+        badgeBg: "#FCE7F3",
+        badgeColor: "#D53F8C",
+        cardBg: "linear-gradient(180deg, #FFF5F8 0%, #FCE7F3 100%)",
+        image: "assets/img/blossom 1000 ml.jpeg",
+        description: "Kemasan keluarga besar 1000 ml (1 Liter) dengan keharuman bunga Blossom yang lembut dan awet sepanjang hari."
+      },
+      {
+        id: "OW-06",
+        name: "Deterjen Ocean 1000 ml",
+        category: "1000ml",
+        sizeLabel: "1000 ml",
+        aroma: "Aroma Ocean",
+        badgeBg: "#E0F2FE",
+        badgeColor: "#0369A1",
+        cardBg: "linear-gradient(180deg, #F0F9FF 0%, #E0F2FE 100%)",
+        image: "assets/img/ocean 1000 ml.jpeg",
+        description: "Kemasan hemat 1000 ml dengan sensasi kesegaran angin laut Ocean yang bersih, sejuk, dan menenangkan."
+      },
+      {
+        id: "OW-07",
+        name: "Deterjen Kapsul Akasia",
+        category: "kapsul",
+        sizeLabel: "Kapsul Praktis",
+        aroma: "Aroma Akasia",
+        badgeBg: "#E6FFFA",
+        badgeColor: "#2C7A7B",
+        cardBg: "linear-gradient(180deg, #F0FFF4 0%, #E6FFFA 100%)",
+        image: "assets/img/kapsul akasia.jpeg",
+        description: "Deterjen konsentrat tinggi dalam kapsul larut air dengan keharuman Akasia. Praktis sekali cemplung tanpa takar."
+      },
+      {
+        id: "OW-08",
+        name: "Deterjen Kapsul Blossom",
+        category: "kapsul",
+        sizeLabel: "Kapsul Praktis",
+        aroma: "Aroma Blossom",
+        badgeBg: "#FCE7F3",
+        badgeColor: "#D53F8C",
+        cardBg: "linear-gradient(180deg, #FFF5F8 0%, #FCE7F3 100%)",
+        image: "assets/img/kapsul blossom.jpeg",
+        description: "Inovasi deterjen kapsul sekali pakai dengan keharuman bunga Blossom mewah, efektif mengangkat noda membandel."
+      }
+    ];
+
+    const productGrid = document.getElementById("productGrid");
+    const productSearch = document.getElementById("productSearch");
+    const filterButtons = document.querySelectorAll("#productFilters .filter-btn");
+    let currentFilter = "all";
+
+    function buildWaProductLink(productName) {
+      const msg = `Halo OWIN,\nSaya tertarik memesan produk *${productName}* dari website Omah Wangi. Mohon informasi ketersediaan stok dan cara pemesanannya ya. Terima kasih.`;
+      return WA_OWIN_BASE + encodeURIComponent(msg) + "&type=phone_number&app_absent=0";
+    }
+
+    function openPreviewModal(product) {
+      document.getElementById("previewModalTitle").textContent = product.name;
+      const modalImg = document.getElementById("previewModalImg");
+      modalImg.src = product.image;
+      modalImg.alt = product.name;
+      document.getElementById("previewModalDesc").textContent = product.description;
+      document.getElementById("previewModalWa").href = buildWaProductLink(product.name);
+      const modal = new bootstrap.Modal(document.getElementById("productPreviewModal"));
+      modal.show();
+    }
+
+    function renderProducts() {
+      const keyword = productSearch.value.trim().toLowerCase();
+      const filtered = productsData.filter(item => {
+        const matchesCategory = currentFilter === "all" || item.category === currentFilter;
+        const matchesKeyword =
+          item.name.toLowerCase().includes(keyword) ||
+          item.aroma.toLowerCase().includes(keyword) ||
+          item.description.toLowerCase().includes(keyword);
+        return matchesCategory && matchesKeyword;
+      });
+
+      if (filtered.length === 0) {
+        productGrid.innerHTML = `
+          <div class="col-12 text-center py-5">
+            <div class="bg-white rounded-4 p-5 border">
+              <i class="bi bi-search fs-1 text-muted mb-3 d-block"></i>
+              <h5 class="fw-bold">Produk tidak ditemukan</h5>
+              <p class="text-muted mb-0">Coba gunakan kata kunci lain seperti "Blossom", "Akasia", "Snappy", atau "Ocean".</p>
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      productGrid.innerHTML = filtered.map(item => `
+        <div class="col-xl-3 col-lg-4 col-md-6">
+          <div class="product-card">
+            <div class="product-visual" style="background: ${item.cardBg};" onclick='openPreviewModal(${JSON.stringify(item).replace(/'/g, "&apos;")})' title="Klik untuk memperbesar foto kemasan">
+              <span class="aroma-badge" style="background-color: ${item.badgeBg}; color: ${item.badgeColor};">
+                ${item.aroma}
+              </span>
+              <span class="size-badge">${item.sizeLabel}</span>
+              <img src="${item.image}" alt="${item.name}" class="product-photo" loading="lazy" onerror="this.onerror=null; this.src='assets/img/logo.png';">
+            </div>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <small class="text-muted fw-semibold"><i class="bi bi-patch-check-fill text-success me-1"></i>Halal Indonesia</small>
+                <small class="text-primary fw-semibold" style="cursor: pointer;" onclick='openPreviewModal(${JSON.stringify(item).replace(/'/g, "&apos;")})'><i class="bi bi-zoom-in"></i> Perbesar</small>
+              </div>
+              <h5 class="fw-bold mb-2">${item.name}</h5>
+              <p class="text-muted small mb-4 flex-grow-1">${item.description}</p>
+              <div class="d-grid gap-2">
+                <a href="${buildWaProductLink(item.name)}" target="_blank" rel="noopener" class="btn btn-wa btn-sm py-2">
+                  <i class="bi bi-whatsapp me-1"></i> Pesan via WhatsApp
+                </a>
+                <a href="${SHOPEE_URL}" target="_blank" rel="noopener" class="btn btn-shopee btn-sm py-2">
+                  <i class="bi bi-bag-fill me-1"></i> Beli di Shopee
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        filterButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        currentFilter = btn.dataset.filter;
+        renderProducts();
+      });
+    });
+
+    productSearch.addEventListener("input", renderProducts);
+
+    // Initialize catalog on load
+    renderProducts();
+  </script>
+</body>
+
+</html>
